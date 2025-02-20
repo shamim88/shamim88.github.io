@@ -1,0 +1,44 @@
+html,body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+.placeholder {
+    display: flex;
+    height: 100vh;
+}
+
+.placeholder > div {
+    margin: auto auto;
+}
+
+@keyframes typing {
+    0%{
+        width: 0;
+    }
+    40% {
+        width: 100%;
+    }
+    
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    60%{
+        border: transparent;
+    }
+}
+
+.placeholder > div > h1 {
+    text-wrap: nowrap;
+    overflow: hidden;
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin:0;
+    animation: typing 8s steps(15) infinite, blink 0.7s infinite;
+}
