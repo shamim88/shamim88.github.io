@@ -2,17 +2,29 @@ html,body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    background: rgb(201, 198, 198);
 }
 
 
 .placeholder {
     display: flex;
     height: 100vh;
+    flex-direction: column;
+}
+.placeholder > .logo-holder {
+    margin: auto;
 }
 
-.placeholder > div {
+.placeholder > .message {
+    flex:1;
+    display: flex;
+    background-color: white;
+}
+
+.placeholder > .message > div {
     margin: auto auto;
 }
+
 
 @keyframes typing {
     0%{
@@ -48,14 +60,20 @@ html,body {
     }
 }
 
-.placeholder > div > h1 {
+.placeholder > .message > div > h1 {
     text-wrap: nowrap;
     overflow: hidden;
     border: 2px solid red;
     border-radius: 5px;
     padding: 0.5em;
     margin:0;
-    animation: typing 8s steps(15) infinite, blink 0.7s infinite, lighting 7s infinite;
+    animation: typing 8s steps(15) infinite, blink 0.7s infinite, lighting 3s infinite;
     text-shadow: 1px 1px rgb(87, 84, 84);
-    font-size: xx-large;
+    font-size: 36px;
+}
+
+
+.logo {
+    height: 300px;
+    width: 400px;
 }
