@@ -33,6 +33,21 @@ html,body {
     }
 }
 
+@keyframes lighting {
+    0%{
+        color: red;
+    }
+    30%{
+        color: purple;
+    }
+    60% {
+        color: blue;
+    }
+    100%{
+        color: rgb(10, 61, 10);
+    }
+}
+
 .placeholder > div > h1 {
     text-wrap: nowrap;
     overflow: hidden;
@@ -40,5 +55,7 @@ html,body {
     border-radius: 5px;
     padding: 0.5em;
     margin:0;
-    animation: typing 8s steps(15) infinite, blink 0.7s infinite;
+    animation: typing 8s steps(15) infinite, blink 0.7s infinite, lighting 7s infinite;
+    text-shadow: 1px 1px rgb(87, 84, 84);
+    font-size: xx-large;
 }
